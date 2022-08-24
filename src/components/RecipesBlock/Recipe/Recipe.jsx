@@ -14,8 +14,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import Alert from '@mui/material/Alert';
 import { addFavouriteRecipe, removeFavouriteRecipe } from '../../../store/mainSlice';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
 import { useEffect, useState } from 'react';
@@ -65,9 +63,7 @@ export default function RecipeReviewCard({ item, setNotificationStatus, notifica
     const shareRecipe = () => {
         navigator.clipboard.writeText(item.recipe.url);
         setNotificationStatus(true);
-        setTimeout(() => setNotificationStatus(false), 2500);
-        // alert('Link successfully copied');
-        
+        setTimeout(() => setNotificationStatus(false), 2500); 
     }
 
     const handleExpandClick = () => {

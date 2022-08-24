@@ -8,7 +8,6 @@ button {
     display: flex;
     flex-direction: column;
     flex: 1 1 50%;
-    // padding: 10px;
 
     @media (max-width: 767px) {
         flex: 1 1 100%;
@@ -46,8 +45,6 @@ button {
     &__info {
         display: flex;
         flex-direction: column;
-        // color: darkslategrey;
-        // font-weight: 500;
 
         h2 {
             text-align: left;
@@ -67,12 +64,9 @@ button {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
-        // color: darkslategrey;
-        // font-weight: 500;
 
         div {
             padding: 5px;
-            // border: 1px solid grey;
             border-radius: 5px;
             background: rgb(240, 240, 240);
         }
@@ -92,7 +86,6 @@ button {
             margin: 20px 0 0 0;
             text-align: center;
             font-size: 18px;
-            // color: darkslategrey;
         }
     }
 
@@ -101,8 +94,6 @@ button {
         cursor: pointer;
         background: rgb(240, 240, 240);
         padding: 5px;
-        
-        // border: 0 transparent;
         border-radius: 5px;
         font-weight: 500;
         word-wrap:break-word;

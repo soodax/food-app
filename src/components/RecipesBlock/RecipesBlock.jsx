@@ -10,12 +10,11 @@ import Tooltip from '@mui/material/Tooltip';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-const RecipesBlock = () => {
+const RecipesBlock = ({setNotificationStatus, notificationStatus}) => {
 
     const [recipesData, setRecipesData] = useState();
     const [currentRecipe, setCurrentRecipe] = useState('');
     const [buttonIsDisabled, changeButtonState] = useState(false);
-    const [notificationStatus, setNotificationStatus] = useState(false);
     const appKey = '5b9aa0bbec119b6bcaf145c60419178a';
     const appID = '394835c1';
 
