@@ -1,0 +1,146 @@
+.header {
+    display: flex;
+    width: 100%;
+    background: rgb(60, 60, 60);
+    padding: 10px 20px;
+    // border-radius: 0 0 20px 20px;
+    box-shadow: 3px 3px 3px grey;
+    margin: 0 0 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        span {
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+        }
+
+        img {
+            max-width: 32px;
+            max-height: 32px;
+        }
+    }
+
+    &__nav {
+        z-index: 3;
+         
+        // transition: 0.5s;
+        ul {
+            display: flex;
+            gap: 20px;
+        }
+
+
+
+        ul li a {
+            transition: 0.2s;
+            
+        }
+
+        ul li a:hover {
+            color: gold;
+        }
+
+        ul li a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 767px) {
+            // min-height: 100vh;
+            height: 0;
+            overflow: hidden;
+            background: rgb(60, 60, 60);
+            padding: 30px 20px;
+            
+
+            ul {
+                flex-direction: column;
+            }
+
+            ul li {
+                padding: 0 0 10px 0;
+                border-bottom: 1px solid grey;
+            }
+        }
+    }
+    
+}
+
+.default-link {
+    color: white;
+}
+
+.active-link {
+    color: gold;
+
+}
+
+.menu-btn {
+    display: none;
+    background: rgb(100, 100, 100);
+    // border: 0px transparent;
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    // div {
+    //     border: 2px solid red;
+    // }
+    // padding: 1px;
+    
+
+    @media (max-width: 767px) {
+        display: block;
+    }
+}
+
+.menu-open {
+    transition: 0.5s;
+    // transition-timing-function:;
+    // height: auto;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    min-height: 100vh;
+
+    @media (min-width: 767px) {
+        position: static;
+        min-height:auto;
+        
+
+        ul {
+            flex-direction: row;
+        }
+
+    }
+}
+
+.menu-close {
+    transition: 0.5s;
+    // transition-timing-function:ease-out;
+    // display: none;
+    top: -200px;
+    position: absolute;
+    right: 0;
+    // padding: 0;
+
+    @media (min-width: 767px) {
+        position: static;
+    }
+}
+

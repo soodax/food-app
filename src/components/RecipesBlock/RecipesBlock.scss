@@ -1,0 +1,139 @@
+.recipesBlock {
+    padding: 10px;
+    position: relative;
+    // h1 {
+    //     text-align: center;
+    //     font-size: 28px;
+    //     // font-weight: 500;
+    //     color: darkslategrey;
+    //     margin: 10px 0;
+    // }
+
+    
+
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        max-width: 990px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
+
+        input {
+            // color: darkslategrey;
+            // border-radius: 5px;
+            // padding: 10px;
+            // font-weight: 600;
+            // font-size: 18px;
+        }
+
+    }
+
+    &__field {
+        border: 2px solid lightblue;
+        width: 100%;
+        
+    }
+
+    &__field:focus {
+        border: 2px solid darkcyan;
+    }
+
+    &__clear {
+        appearance: none;
+        cursor: pointer;
+        transition: 0.2s;
+        background: rgb(255, 202, 202);   
+    }
+
+    &__clear:hover {
+        background: lightcoral;
+        color: white;
+    }
+
+    &__button {
+        appearance: none;
+        cursor: pointer;
+        transition: 0.2s;
+        background: lightblue;
+    }
+
+    &__button:disabled{
+        background: dimgray;
+        color: white;
+    }
+
+    &__button:disabled:hover{
+        cursor:not-allowed;
+        background: dimgray;
+        color: white;
+    }
+
+    &__button:hover {
+        background: darkcyan;
+        color: white;
+    }
+
+    &__row {
+        
+        column-gap: 10px;
+        row-gap: 20px;
+        display: grid;
+        // flex-direction: column;
+        // flex-wrap: wrap;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+        margin: 0 auto;
+        justify-items: center;
+        align-items: flex-start;
+
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 500px) {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 40px;
+        }
+
+        // div {
+        //     flex: 1 1 33.333%;
+        // }
+    }
+
+
+}
+
+.MuiTextField-root {
+    // padding: 20px 0;
+    width: 100%;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+    background: lightgreen;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    font-size: 16px;
+}
+
+.notification-on {
+   
+    visibility: visible;
+}
+
+.notification-off {
+   
+    visibility: hidden;
+}
