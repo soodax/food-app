@@ -15,8 +15,8 @@ const RecipesBlock = ({setNotificationStatus, notificationStatus}) => {
     const [recipesData, setRecipesData] = useState();
     const [currentRecipe, setCurrentRecipe] = useState('');
     const [buttonIsDisabled, changeButtonState] = useState(false);
-    const appKey = '5b9aa0bbec119b6bcaf145c60419178a';
-    const appID = '394835c1';
+    const appKey = process.env.REACT_APP_EDAMAM_API_KEY;
+    const appID = process.env.REACT_APP_EDAMAM_APP_ID;
 
     const theme = createTheme({
         palette: {

@@ -35,9 +35,9 @@ const Main = ({ type }) => {
     const findProduct = async (value) => {
         let response = await axios.get(`https://trackapi.nutritionix.com/v2/search/instant?query=${value}&detailed=true`, {
             headers: {
-                'x-app-id': '54f5d3b6',
-                'x-app-key': 'd34ddd01bf17a0575a64a71526e00c07',
-                'x-remote-user-id': '0'
+                'x-app-id': process.env.REACT_APP_NUTRITIONIX_API_ID,
+                'x-app-key': process.env.REACT_APP_NUTRITIONIX_API_KEY,
+                'x-remote-user-id': process.env.REACT_APP_NUTRITIONIX_API_REMOTE_ID
             }
         });
 
